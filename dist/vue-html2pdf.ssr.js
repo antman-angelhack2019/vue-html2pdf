@@ -145,7 +145,12 @@ var script = {
 					a class named 'html2pdf__page-break' and insert the element before the element
 					that will be in the next page
 				*/
-				for (var childElement of ArrOfContentChildren) {
+				// 2021/12/27 Updated start
+				// for (var childElement of ArrOfContentChildren) {
+				for (var key in ArrOfContentChildren) {
+					const childElement = ArrOfContentChildren[key];
+				// 2021/12/27 Updated end
+				
 					// Get The First Class of the element
 					var elementFirstClass = childElement.classList[0];
 					var isPageBreakClass = elementFirstClass === 'html2pdf__page-break';
