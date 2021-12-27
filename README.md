@@ -1,5 +1,5 @@
 # VueHTML2PDF Documentation
-Testing
+IE 11 compatibility 2021/12/28 - 00:04
 
 #### Package Github:
 https://github.com/kempsteven/vue-html2pdf
