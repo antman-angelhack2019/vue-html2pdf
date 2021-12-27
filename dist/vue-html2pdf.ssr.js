@@ -147,8 +147,8 @@ var script = {
 				*/
 				// 2021/12/27 Updated start
 				// for (var childElement of ArrOfContentChildren) {
-				for (var key in ArrOfContentChildren) {
-					const childElement = ArrOfContentChildren[key];
+				for (var childKey in ArrOfContentChildren) {
+					var childElement = ArrOfContentChildren[childKey];
 				// 2021/12/27 Updated end
 				
 					// Get The First Class of the element
