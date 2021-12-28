@@ -197,7 +197,7 @@ var script = {
 			this.downloadPdf();
 		},
 
-		downloadPdf: async function downloadPdf () {
+		downloadPdf: function downloadPdf () {
 			// Set Element and Html2pdf.js Options
 			var pdfContent = this.$refs.pdfContent;
 			var options = this.setOptions();
@@ -208,17 +208,17 @@ var script = {
 			var pdfBlobUrl = null;
 
 			if (this.previewModal) {
-				this.pdfFile = await html2PdfSetup.output('bloburl');
+				this.pdfFile = html2PdfSetup.output('bloburl');
 				pdfBlobUrl = this.pdfFile;
 			}
 
 			if (this.enableDownload) {
-				pdfBlobUrl = await html2PdfSetup.save().output('bloburl');
+				pdfBlobUrl = html2PdfSetup.save().output('bloburl');
 			}
 
 			if (pdfBlobUrl) {
-				var res = await fetch(pdfBlobUrl);
-				var blobFile = await res.blob();
+				var res = fetch(pdfBlobUrl);
+				var blobFile = res.blob();
 				this.$emit('hasDownloaded', blobFile);
 			}
 
